@@ -20,6 +20,25 @@ const services = [
   { img: serviceReconstruction, title: "Reconstruction", desc: "Full-service reconstruction to restore your property to pre-loss condition." },
 ];
 
+const ServiceCardContent = ({ service }: { service: typeof services[number] }) => (
+  <>
+    <div className="aspect-[4/3] overflow-hidden">
+      <img
+        src={service.img}
+        alt={service.title}
+        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+      />
+    </div>
+    <div className="p-5 bg-card">
+      <h3 className="font-display text-base font-semibold uppercase text-card-foreground mb-2 group-hover:text-secondary transition-colors">
+        {service.title}
+      </h3>
+      <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
+    </div>
+    <div className="absolute inset-0 aspect-[4/3] bg-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+  </>
+);
+
 const Services = () => {
   return (
     <section id="services" className="py-24 md:py-32 bg-background">
