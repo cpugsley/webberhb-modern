@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import serviceWater from "@/assets/service-water.jpg";
 import serviceMold from "@/assets/service-mold.jpg";
 import serviceFire from "@/assets/service-fire.jpg";
@@ -10,7 +11,7 @@ import serviceReconstruction from "@/assets/service-reconstruction.jpg";
 
 const services = [
   { img: serviceWater, title: "Water Damage Restoration", desc: "Rapid water extraction, drying, and structural restoration to prevent further damage." },
-  { img: serviceMold, title: "Mold Testing & Remediation", desc: "Comprehensive mold inspection, testing, and certified remediation services." },
+  { img: serviceMold, title: "Mold Testing & Remediation", desc: "Comprehensive mold inspection, testing, and certified remediation services.", link: "/services/mold-remediation" },
   { img: serviceFire, title: "Fire & Smoke Cleanup", desc: "Complete fire damage restoration including smoke, soot, and odor removal." },
   { img: serviceDisinfect, title: "Disinfecting", desc: "Professional-grade disinfection for homes, offices, and commercial spaces." },
   { img: serviceStorm, title: "Storm & Disaster Response", desc: "Emergency response for storm damage, flooding, and natural disasters." },
@@ -18,6 +19,25 @@ const services = [
   { img: serviceContents, title: "Contents Cleaning", desc: "Careful cleaning, inventory, and restoration of personal belongings." },
   { img: serviceReconstruction, title: "Reconstruction", desc: "Full-service reconstruction to restore your property to pre-loss condition." },
 ];
+
+const ServiceCardContent = ({ service }: { service: typeof services[number] }) => (
+  <>
+    <div className="aspect-[4/3] overflow-hidden">
+      <img
+        src={service.img}
+        alt={service.title}
+        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+      />
+    </div>
+    <div className="p-5 bg-card">
+      <h3 className="font-display text-base font-semibold uppercase text-card-foreground mb-2 group-hover:text-secondary transition-colors">
+        {service.title}
+      </h3>
+      <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
+    </div>
+    <div className="absolute inset-0 aspect-[4/3] bg-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+  </>
+);
 
 const Services = () => {
   return (
@@ -43,25 +63,13 @@ const Services = () => {
               transition={{ delay: i * 0.08 }}
               className="group relative rounded-lg overflow-hidden border border-border hover:border-secondary/40 hover:shadow-xl transition-all duration-500 cursor-pointer"
             >
-              {/* Image */}
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-5 bg-card">
-                <h3 className="font-display text-base font-semibold uppercase text-card-foreground mb-2 group-hover:text-secondary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
-              </div>
-
-              {/* Hover overlay on image */}
-              <div className="absolute inset-0 aspect-[4/3] bg-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              {service.link ? (
+                <Link to={service.link} className="block">
+                  <ServiceCardContent service={service} />
+                </Link>
+              ) : (
+                <ServiceCardContent service={service} />
+              )}
             </motion.div>
           ))}
         </div>
