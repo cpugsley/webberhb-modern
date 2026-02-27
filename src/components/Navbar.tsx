@@ -36,7 +36,7 @@ const Navbar = () => {
               href="https://www.instagram.com/webberhb"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary-foreground/80 hover:text-secondary transition-colors"
+              className="text-foreground/70 hover:text-secondary transition-colors"
             >
               <Instagram className="w-5 h-5" />
             </a>
