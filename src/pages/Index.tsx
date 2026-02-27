@@ -17,7 +17,7 @@ const Index = () => {
       <Certifications />
       <Reviews />
       <ContactCTA />
-      <Footer />
+      
     </div>
   );
 };
