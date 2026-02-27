@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Menu, X, Instagram } from "lucide-react";
+import { Phone, Menu, X, Instagram, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
 
@@ -14,7 +14,19 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border shadow-sm">
+    <>
+      {/* 24/7 Top Banner */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center gap-2 py-1.5 text-xs sm:text-sm font-display tracking-widest uppercase">
+          <Clock className="w-3.5 h-3.5 text-secondary" />
+          <span>24/7 Emergency Response</span>
+          <span className="text-secondary font-bold mx-1">•</span>
+          <a href="tel:5515021052" className="text-secondary hover:brightness-110 transition-all font-bold">
+            Call 551-502-1052
+          </a>
+        </div>
+      </div>
+      <nav className="fixed top-[34px] sm:top-[36px] left-0 right-0 z-50 bg-white border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-3">
@@ -91,6 +103,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </nav>
+    </>
   );
 };
 
