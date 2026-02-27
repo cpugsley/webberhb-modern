@@ -53,9 +53,9 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <div className="fixed top-0 left-0 right-0 z-50">
       {/* 24/7 Top Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground">
+      <div className="bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center gap-2 py-1.5 text-xs sm:text-sm font-display tracking-widest uppercase">
           <Clock className="w-3.5 h-3.5 text-secondary" />
           <span>24/7 Emergency Response</span>
@@ -65,7 +65,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <nav className="fixed top-[34px] sm:top-[36px] left-0 right-0 z-50 bg-white border-b border-border shadow-sm">
+      <nav className="bg-white border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="/" onClick={handleLogoClick} className="flex items-center gap-3">
@@ -229,7 +229,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </nav>
-    </>
+    </div>
   );
 };
 
