@@ -65,7 +65,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <nav className="fixed top-[34px] sm:top-[36px] left-0 right-0 z-50 bg-white border-b border-border shadow-sm">
+      <nav className="fixed top-[33px] sm:top-[34px] left-0 right-0 z-50 bg-white border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="/" onClick={handleLogoClick} className="flex items-center gap-3">
