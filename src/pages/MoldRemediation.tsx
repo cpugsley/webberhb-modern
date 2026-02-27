@@ -285,7 +285,7 @@ const MoldRemediation = () => {
                   className="flex gap-6 relative"
                 >
                   <div className="flex-shrink-0 w-[78px] flex flex-col items-center">
-                    <div className="w-14 h-14 rounded-lg bg-secondary/10 border border-secondary/20 flex items-center justify-center relative z-10 bg-background">
+                    <div className="w-14 h-14 rounded-lg bg-background border border-secondary/20 flex items-center justify-center relative z-10">
                       <item.icon className="w-6 h-6 text-secondary" />
                     </div>
                   </div>
