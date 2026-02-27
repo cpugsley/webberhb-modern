@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import ContactCTA from "@/components/ContactCTA";
 import moldImg from "@/assets/service-mold.jpg";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const process = [
   {
@@ -499,7 +500,7 @@ const MoldRemediation = () => {
               Frequently Asked Questions
             </h2>
           </motion.div>
-          <div className="space-y-4">
+          <Accordion type="multiple" className="space-y-4">
             {faqs.map((faq, i) => (
               <motion.div
                 key={i}
@@ -507,17 +508,20 @@ const MoldRemediation = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="bg-card border border-border rounded-lg p-6"
               >
-                <h3 className="font-display text-base font-bold text-foreground">
-                  {faq.q}
-                </h3>
-                <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
-                  {faq.a}
-                </p>
+                <AccordionItem value={`faq-${i}`} className="bg-card border border-border rounded-lg px-6">
+                  <AccordionTrigger className="font-display text-base font-bold text-foreground hover:no-underline">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
               </motion.div>
             ))}
-          </div>
+          </Accordion>
         </div>
       </section>
 
