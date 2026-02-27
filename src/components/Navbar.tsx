@@ -20,7 +20,11 @@ const Navbar = () => {
     e.preventDefault();
     setIsOpen(false);
     if (location.pathname !== "/") {
-      navigate("/" + href);
+      navigate("/");
+      setTimeout(() => {
+        const el = document.querySelector(href);
+        el?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
     } else {
       const el = document.querySelector(href);
       el?.scrollIntoView({ behavior: "smooth" });
