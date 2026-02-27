@@ -217,13 +217,6 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="tel:5515021052"
-                className="flex items-center gap-2 bg-secondary text-secondary-foreground px-5 py-3 rounded font-display text-sm tracking-wider uppercase w-fit"
-              >
-                <Phone className="w-4 h-4" />
-                551-502-1052
-              </a>
             </div>
           </motion.div>
         )}
