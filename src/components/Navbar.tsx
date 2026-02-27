@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Phone, Menu, X, Instagram, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
