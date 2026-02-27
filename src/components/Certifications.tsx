@@ -9,17 +9,22 @@ const certs = [
 
 const Certifications = () => {
   return (
-    <section className="py-20 bg-background border-y border-border">
+    <section className="py-20 md:py-24 bg-background border-y border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="font-display text-sm tracking-[0.3em] uppercase text-secondary text-center mb-12"
+          className="text-center mb-14"
         >
-          Certifications & Awards
-        </motion.p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <span className="font-display text-sm tracking-[0.3em] uppercase text-secondary">
+            Certifications & Awards
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3">
+            Industry-Recognized Excellence
+          </h2>
+        </motion.div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 items-start">
           {certs.map((cert, i) => (
             <motion.div
               key={cert.name}
@@ -29,13 +34,15 @@ const Certifications = () => {
               transition={{ delay: i * 0.1 }}
               className="flex flex-col items-center text-center"
             >
-              <img
-                src={cert.img}
-                alt={cert.name}
-                className="w-20 h-20 object-contain mb-4 grayscale hover:grayscale-0 transition-all duration-300"
-              />
-              <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">{cert.name}</h3>
-              <p className="text-xs text-muted-foreground mt-1">{cert.detail}</p>
+              <div className="w-28 h-28 md:w-32 md:h-32 rounded-xl bg-muted/50 border border-border flex items-center justify-center p-4 mb-5">
+                <img
+                  src={cert.img}
+                  alt={cert.name}
+                  className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <h3 className="font-display text-base md:text-lg font-bold uppercase tracking-wider text-foreground">{cert.name}</h3>
+              <p className="text-sm text-muted-foreground mt-1">{cert.detail}</p>
             </motion.div>
           ))}
         </div>
