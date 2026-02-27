@@ -11,7 +11,7 @@ import serviceReconstruction from "@/assets/service-reconstruction.jpg";
 
 const services = [
   { img: serviceWater, title: "Water Damage Restoration", desc: "Rapid water extraction, drying, and structural restoration to prevent further damage." },
-  { img: serviceMold, title: "Mold Testing & Remediation", desc: "Comprehensive mold inspection, testing, and certified remediation services." },
+  { img: serviceMold, title: "Mold Testing & Remediation", desc: "Comprehensive mold inspection, testing, and certified remediation services.", link: "/services/mold-remediation" },
   { img: serviceFire, title: "Fire & Smoke Cleanup", desc: "Complete fire damage restoration including smoke, soot, and odor removal." },
   { img: serviceDisinfect, title: "Disinfecting", desc: "Professional-grade disinfection for homes, offices, and commercial spaces." },
   { img: serviceStorm, title: "Storm & Disaster Response", desc: "Emergency response for storm damage, flooding, and natural disasters." },
