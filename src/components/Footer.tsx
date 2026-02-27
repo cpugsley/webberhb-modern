@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="WEBBER Home and Business" className="h-10 w-auto" />
+            <img src={logo} alt="WEBBER Home and Business" className="h-14 w-auto" />
           </div>
 
           <div className="flex items-center gap-6">
