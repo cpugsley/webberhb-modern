@@ -44,25 +44,13 @@ const Services = () => {
               transition={{ delay: i * 0.08 }}
               className="group relative rounded-lg overflow-hidden border border-border hover:border-secondary/40 hover:shadow-xl transition-all duration-500 cursor-pointer"
             >
-              {/* Image */}
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-5 bg-card">
-                <h3 className="font-display text-base font-semibold uppercase text-card-foreground mb-2 group-hover:text-secondary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
-              </div>
-
-              {/* Hover overlay on image */}
-              <div className="absolute inset-0 aspect-[4/3] bg-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              {service.link ? (
+                <Link to={service.link} className="block">
+                  <ServiceCardContent service={service} />
+                </Link>
+              ) : (
+                <ServiceCardContent service={service} />
+              )}
             </motion.div>
           ))}
         </div>
