@@ -17,9 +17,15 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="font-display text-sm md:text-base tracking-[0.3em] uppercase text-secondary mb-6">
-            24/7 Emergency Response
-          </p>
+          <div className="inline-flex items-center gap-3 bg-secondary/20 border border-secondary/40 rounded-full px-5 py-2 mb-8">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+            </span>
+            <p className="font-display text-sm md:text-base tracking-[0.25em] uppercase text-primary-foreground">
+              24/7 Emergency Response — Always On Call
+            </p>
+          </div>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-[0.95] text-primary-foreground mb-6">
             Restoring What
             <br />

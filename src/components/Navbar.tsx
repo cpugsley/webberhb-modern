@@ -103,6 +103,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </nav>
+    </>
   );
 };
 
