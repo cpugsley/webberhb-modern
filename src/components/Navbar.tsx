@@ -74,7 +74,7 @@ const Navbar = () => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block font-display text-sm tracking-widest uppercase text-primary-foreground/80 hover:text-secondary transition-colors"
+                  className="block font-display text-sm tracking-widest uppercase text-foreground/70 hover:text-secondary transition-colors"
                 >
                   {link.label}
                 </a>
