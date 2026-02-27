@@ -1,4 +1,4 @@
-import { Phone, ArrowDown } from "lucide-react";
+import { Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 
