@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary-foreground/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-3">
@@ -27,7 +27,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="font-display text-sm tracking-widest uppercase text-primary-foreground/80 hover:text-secondary transition-colors"
+                className="font-display text-sm tracking-widest uppercase text-foreground/70 hover:text-secondary transition-colors"
               >
                 {link.label}
               </a>
@@ -36,7 +36,7 @@ const Navbar = () => {
               href="https://www.instagram.com/webberhb"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary-foreground/80 hover:text-secondary transition-colors"
+              className="text-foreground/70 hover:text-secondary transition-colors"
             >
               <Instagram className="w-5 h-5" />
             </a>
@@ -52,7 +52,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-primary-foreground"
+            className="md:hidden text-foreground"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -66,7 +66,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-primary overflow-hidden"
+            className="md:hidden bg-background overflow-hidden"
           >
             <div className="px-4 py-6 space-y-4">
               {links.map((link) => (
@@ -74,7 +74,7 @@ const Navbar = () => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block font-display text-sm tracking-widest uppercase text-primary-foreground/80 hover:text-secondary transition-colors"
+                  className="block font-display text-sm tracking-widest uppercase text-foreground/70 hover:text-secondary transition-colors"
                 >
                   {link.label}
                 </a>
