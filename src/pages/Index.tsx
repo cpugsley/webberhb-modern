@@ -5,7 +5,7 @@ import About from "@/components/About";
 import Certifications from "@/components/Certifications";
 import Reviews from "@/components/Reviews";
 import ContactCTA from "@/components/ContactCTA";
-import Footer from "@/components/Footer";
+
 
 const Index = () => {
   return (
