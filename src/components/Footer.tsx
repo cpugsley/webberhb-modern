@@ -1,14 +1,12 @@
 import { Instagram, Phone } from "lucide-react";
-import logo from "@/assets/logo.png";
+
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="WEBBER Home and Business" className="h-14 w-auto" />
-          </div>
+          <span className="text-lg font-bold tracking-tight">WEBBER Home and Business</span>
 
           <div className="flex items-center gap-6">
             <a href="tel:5515021052" className="flex items-center gap-2 text-primary-foreground/80 hover:text-secondary transition-colors text-sm">
