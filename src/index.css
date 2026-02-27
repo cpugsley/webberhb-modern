@@ -18,29 +18,29 @@
     --primary: 220 30% 15%;
     --primary-foreground: 40 100% 97%;
 
-    --secondary: 38 92% 50%;
-    --secondary-foreground: 220 30% 10%;
+    --secondary: 205 78% 45%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 220 15% 92%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 38 92% 50%;
-    --accent-foreground: 220 30% 10%;
+    --accent: 205 78% 45%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 15% 88%;
     --input: 220 15% 88%;
-    --ring: 38 92% 50%;
+    --ring: 205 78% 45%;
 
     --radius: 0.5rem;
 
     --hero-overlay: linear-gradient(135deg, hsla(220, 30%, 10%, 0.85), hsla(220, 30%, 10%, 0.6));
     --section-dark-bg: 220 30% 10%;
     --section-dark-fg: 220 15% 92%;
-    --gold: 38 92% 50%;
-    --gold-light: 38 90% 65%;
+    --gold: 205 78% 45%;
+    --gold-light: 205 70% 60%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -62,19 +62,19 @@
     --card-foreground: 220 15% 92%;
     --popover: 220 28% 12%;
     --popover-foreground: 220 15% 92%;
-    --primary: 38 92% 50%;
+    --primary: 205 78% 45%;
     --primary-foreground: 220 30% 10%;
     --secondary: 220 25% 20%;
     --secondary-foreground: 220 15% 92%;
     --muted: 220 20% 18%;
     --muted-foreground: 220 10% 55%;
-    --accent: 38 92% 50%;
+    --accent: 205 78% 45%;
     --accent-foreground: 220 30% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 220 20% 20%;
     --input: 220 20% 20%;
-    --ring: 38 92% 50%;
+    --ring: 205 78% 45%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -104,6 +104,6 @@
 @layer utilities {
   .text-gradient-gold {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 90% 65%));
+    background-image: linear-gradient(135deg, hsl(205 78% 45%), hsl(205 70% 60%));
   }
 }
