@@ -272,7 +272,7 @@ const MoldRemediation = () => {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="hidden md:block absolute left-[39px] top-0 bottom-0 w-px bg-border" />
+            <div className="hidden md:block absolute left-[39px] top-[56px] bottom-[56px] w-px bg-border" />
 
             <div className="space-y-8">
               {process.map((item, i) => (
