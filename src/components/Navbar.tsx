@@ -52,7 +52,7 @@ const Navbar = () => {
       <nav className="fixed top-[34px] sm:top-[36px] left-0 right-0 z-50 bg-white border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="flex items-center gap-3">
+          <a href="/" onClick={handleLogoClick} className="flex items-center gap-3">
             <img src={logo} alt="WEBBER Home and Business" className="h-14 md:h-16 w-auto" />
           </a>
 
